@@ -1,6 +1,6 @@
 import '../../index.css';
 import PropTypes from "prop-types"
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 function Header({ text, bgColor, textColor }) {
@@ -12,17 +12,16 @@ function Header({ text, bgColor, textColor }) {
   return (
     <header style={headerStyles}>
       <div className='container'>
-        {/* <Link to='/' style={{ textDecoration: "none", color: "#ff6a95" }}>
+        <Link to='/' style={{ textDecoration: "none", color: "#ff6a95" }}>
           <h2>{text}</h2>
-        </Link> */}
-        {text}
+        </Link>
       </div>
     </header>
   )
 }
 
 Header.defaultProps = {
-  text: "React Feedback 2.0",
+  text: "React Feedback App",
   bgColor: "rgba(0,0,0,0.4)",
   textColor: "#ff6a95",
 }

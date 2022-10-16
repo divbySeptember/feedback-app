@@ -1,9 +1,7 @@
 import { useContext }  from 'react'
-import propTypes from 'prop-types'
 import FeedbackContext from '../FeedbackContext/FeedbackContext'
 
 function Stats() {
-//Cal ratings avg
 const { feedback } = useContext(FeedbackContext)
 
   // NOTE: simpler average calculation
@@ -24,8 +22,6 @@ const { feedback } = useContext(FeedbackContext)
   )
 }
 
-Stats.propTypes = {
-    feedback: propTypes.array,
-}
+
 
 export default Stats

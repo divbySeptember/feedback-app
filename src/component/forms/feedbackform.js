@@ -67,7 +67,7 @@ function FeedbackForm() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>How would you rate your service with us?</h2>
+        <h2>How would you rate React & it's Functions?</h2>
         <FeedbackRating select={setRating} selected={rating} />
         <div className='input-group'>
           <input

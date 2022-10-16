@@ -1,5 +1,5 @@
 import Card from '../shared/Card'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { FaTimes, FaEdit } from 'react-icons/fa'
 import { useContext } from 'react'
 import FeedbackContext from '../FeedbackContext/FeedbackContext'
@@ -24,12 +24,9 @@ function FeedbackItem({item}) {
 }
 
 FeedbackItem.propTypes = {
-  item: propTypes.object.isRequired
+  item: PropTypes.object.isRequired
 }
 
-Card.propTypes = {
-  children: propTypes.node.isRequired,
-  
-}
+
 
 export default FeedbackItem

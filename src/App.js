@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import Header from './component/header/header'
 import Feedbacklist from './component/feedbackItem/Feedbacklist'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -13,7 +14,7 @@ function App()  {
 
 
   return (
-    
+    <React.StrictMode>
     <FeedbackProvider>
       <Router>
         <Header />
@@ -37,6 +38,7 @@ function App()  {
         </div>
       </Router>
     </FeedbackProvider>
+    </React.StrictMode>
   );
 }
 

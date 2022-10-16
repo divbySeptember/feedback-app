@@ -1,14 +1,19 @@
-import React from 'react'
+import { useContext }  from 'react'
 import propTypes from 'prop-types'
+import FeedbackContext from '../FeedbackContext/FeedbackContext'
 
-function Stats({feedback}) {
+function Stats() {
 //Cal ratings avg
+const { feedback } = useContext(FeedbackContext)
 
-let avg =  feedback.reduce((acc, cur) => {
-    return acc + cur.rating
-}, 0) / feedback.length
+  // NOTE: simpler average calculation
+  // Calculate ratings avg
+  const avg = Math.round(
+    feedback.reduce((acc, { rating }) => acc + rating, 0) / feedback.length
+  )
 
-avg = avg.toFixed(1).replace(/[.,]0$/, '')
+  // average = average.toFixed(1).replace(/[.,]0$/, '')
+  // average = Math.round(average)
 
   return (
     <div className="feedback-stats">
@@ -20,7 +25,7 @@ avg = avg.toFixed(1).replace(/[.,]0$/, '')
 }
 
 Stats.propTypes = {
-    feedback: propTypes.array.isRequired,
+    feedback: propTypes.array,
 }
 
 export default Stats

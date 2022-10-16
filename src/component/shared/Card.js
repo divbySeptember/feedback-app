@@ -1,9 +1,9 @@
-import { Children } from "react"
+// import { Children } from "react"
 
-function Card({children, reverse}) {
+function Card({Children, reverse}) {
   return (
     <div className= { `card ${reverse && 'reverse'}`}>
-        {children}
+        {Children}
     </div>
   )
 }
